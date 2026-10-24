@@ -1,0 +1,9 @@
+.venv/
+.venv-gpu/
+__pycache__/
+.env
+.env.*
+models/
+.warp-cache/
+output/*.mp4
+output/*.wav
