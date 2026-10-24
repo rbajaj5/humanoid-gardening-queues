@@ -56,8 +56,11 @@ The third stable-ID arm is summarized from its retained run, not animated.
 Movie: physical_garden/output/humanoid_gardening_gpu.mp4 (7,222,375 bytes).
 SHA256: 76d0f127bbe9e8110759120ff6bca64f5cc6e66cdd7d42fd2156d0b3eb0081d9
 Render/device distinctions are in movie_frames.json; encoding is CPU libx264.
-GitHub upload is pending, to release tag gpu-watering-2026-10-24. Verify the
-asset digest and front-page URL before marking publication complete.
+Published release: gpu-watering-2026-10-24, targeting source commit
+71d94b26e3c4ba9cf78b85c20ec8ff3952d7b0aa. GitHub's asset digest and size match
+the local MP4 above. The remote README was read back and its featured image,
+MP4 URL and measured comparison table verified. Publishing is complete.
+https://github.com/rbajaj5/humanoid-gardening-queues/releases/tag/gpu-watering-2026-10-24
 
 ## Exact Resume / Reproduce Commands
 
