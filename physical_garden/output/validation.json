@@ -1,0 +1,57 @@
+{
+  "tests_passed": 17,
+  "test_output": "test_body_and_aim_envelopes (physical_garden.test_physics.PhysicalAudit.test_body_and_aim_envelopes) ... ok\ntest_conservation_and_capacities_every_frame (physical_garden.test_physics.PhysicalAudit.test_conservation_and_capacities_every_frame) ... ok\ntest_idempotence_and_freshness (physical_garden.test_physics.PhysicalAudit.test_idempotence_and_freshness) ... ok\ntest_real_cuda_and_complete_replay (physical_garden.test_physics.PhysicalAudit.test_real_cuda_and_complete_replay) ... ok\ntest_shared_noise_and_parameters (physical_garden.test_physics.PhysicalAudit.test_shared_noise_and_parameters) ... ok\ntest_source_integrity (physical_garden.test_physics.PhysicalAudit.test_source_integrity) ... ok\ntest_task_completion_derived_from_measurements (physical_garden.test_physics.PhysicalAudit.test_task_completion_derived_from_measurements) ... ok\ntest_tool_has_physical_mass (physical_garden.test_physics.PhysicalAudit.test_tool_has_physical_mass) ... ok\ntest_conservation_capacity_and_no_future_observations (test_simulate.MechanismTests.test_conservation_capacity_and_no_future_observations) ... ok\ntest_freshness_controls_advancement (test_simulate.MechanismTests.test_freshness_controls_advancement) ... ok\ntest_no_duplicate_id_can_execute_twice (test_simulate.MechanismTests.test_no_duplicate_id_can_execute_twice) ... ok\ntest_permanent_sensor_loss_exposes_hold_cost (test_simulate.MechanismTests.test_permanent_sensor_loss_exposes_hold_cost) ... ok\ntest_receipt_loss_not_delivery_loss (test_simulate.MechanismTests.test_receipt_loss_not_delivery_loss) ... ok\ntest_repeatable_inputs (test_simulate.MechanismTests.test_repeatable_inputs) ... ok\ntest_timely_controls_all_succeed (test_simulate.MechanismTests.test_timely_controls_all_succeed) ... ok\ntest_all_retained_replays_regenerate (test_simulate.RetainedTests.test_all_retained_replays_regenerate) ... ok\ntest_pairing_and_summary (test_simulate.RetainedTests.test_pairing_and_summary) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 0.605s\n\nOK\n",
+  "water_kernel_check": {
+    "gpu_device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "origins_m": [
+      [
+        0.25,
+        0.36,
+        0.89
+      ],
+      [
+        0.41,
+        0.23,
+        0.89
+      ],
+      [
+        0.26,
+        0.1,
+        0.89
+      ],
+      [
+        1.0,
+        1.0,
+        0.89
+      ]
+    ],
+    "landed_ml": [
+      1,
+      1,
+      1
+    ],
+    "missed_ml": 1,
+    "active_ml": 0,
+    "total_emitted_ml": 4,
+    "passed": true
+  },
+  "repeatability": {
+    "episode": "lost_receipts_queue_aware",
+    "input_hash_equal": true,
+    "task_events_equal": true,
+    "all_frame_dose_and_decision_metrics_equal": true,
+    "max_absolute_differences": {
+      "qpos": 2.0265579223632812e-06,
+      "qvel": 1.777615398168564e-05,
+      "ctrl": 1.9551775496395862e-06
+    },
+    "qpos_tolerance": 0.001,
+    "qvel_tolerance": 0.01,
+    "note": "GPU floating-point dynamics need not be bitwise identical. qpos mixes metres and radians."
+  },
+  "preserved_original_task_source_sha256": {
+    "simulate.py": "1490b5ae8cb0bc9f0e6146871db5324fe4d10b97e41c373eda6a19c794209cb6",
+    "config.json": "ba53783dd9d26aa5228b755753f962cddfada433068a290dc8807bd66d8e6549",
+    "test_simulate.py": "f8e0714e90f7fc2bc241b70503d8f2f6d83ce85551ef464fce1d93d67b1ae8a3"
+  }
+}

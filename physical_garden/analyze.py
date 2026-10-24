@@ -23,7 +23,17 @@ def main():
               "plant growth, flexible hose, tactile grasp, or trained policy validation is claimed.",
               "", "Full qpos/qvel/control arrays and every 25 Hz observation are retained. The movie",
               "replays the lost-receipt case and the observation-outage counterexample, with every",
-              "video frame mapped to a retained state; it is not a separate animation of planned poses."]
+              "video frame mapped to a retained state; it is not a separate animation of planned poses.",
+              "", "## Calibration history", "",
+              "The first pilot delivered [60, 60, 0] ml and failed the third-pot tool alignment",
+              "gate. A feedback pilot also failed [60, 60, 0] ml. Both logs are retained; the",
+              "original sources are commits ad51426 and c57c933. Inspection found bench-to-hip",
+              "contact. The final bench's front edge moved from x=0.11 to x=0.18 m; pot",
+              "locations and the 0.025 m valve gate did not change. Measured-nozzle feedback",
+              "also remains in the final controller. These are calibrated exploratory results.",
+              "", "The first pilot's tool geom did not add mass because its parent had explicit",
+              "inertia. The final tool has its own fixed child body with 0.18 kg mass, which",
+              "is included in the 33.521142 kg robot-plus-tool mass and checked by a test."]
     (OUT.parent/"RESULTS.md").write_text("\n".join(lines)+"\n")
     (OUT/"comparison.json").write_text(json.dumps([r["summary"] for r in runs],indent=2)+"\n")
     print("\n".join(lines[:16]))

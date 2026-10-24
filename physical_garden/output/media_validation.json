@@ -1,0 +1,38 @@
+{
+  "video": "humanoid_gardening_gpu.mp4",
+  "sha256": "76d0f127bbe9e8110759120ff6bca64f5cc6e66cdd7d42fd2156d0b3eb0081d9",
+  "bytes": 7222375,
+  "encoded_frames": 2200,
+  "duration_s": 88,
+  "full_decode_passed": true,
+  "audio_present": true,
+  "captions_match_narration": true,
+  "source_hashes_match": true,
+  "frame_linkage_passed": true,
+  "coverage": {
+    "lost_receipts_timeout_new_id": {
+      "unique_logged_frames_shown": 850,
+      "retained_frames": 850,
+      "first": 0,
+      "last": 849
+    },
+    "lost_receipts_queue_aware": {
+      "unique_logged_frames_shown": 850,
+      "retained_frames": 850,
+      "first": 0,
+      "last": 849
+    },
+    "permanent_observation_loss_timeout_new_id": {
+      "unique_logged_frames_shown": 301,
+      "retained_frames": 850,
+      "first": 0,
+      "last": 849
+    },
+    "permanent_observation_loss_queue_aware": {
+      "unique_logged_frames_shown": 301,
+      "retained_frames": 850,
+      "first": 0,
+      "last": 849
+    }
+  }
+}

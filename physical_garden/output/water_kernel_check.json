@@ -1,0 +1,34 @@
+{
+  "gpu_device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "origins_m": [
+    [
+      0.25,
+      0.36,
+      0.89
+    ],
+    [
+      0.41,
+      0.23,
+      0.89
+    ],
+    [
+      0.26,
+      0.1,
+      0.89
+    ],
+    [
+      1.0,
+      1.0,
+      0.89
+    ]
+  ],
+  "landed_ml": [
+    1,
+    1,
+    1
+  ],
+  "missed_ml": 1,
+  "active_ml": 0,
+  "total_emitted_ml": 4,
+  "passed": true
+}

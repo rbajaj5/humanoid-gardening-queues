@@ -1,5 +1,9 @@
 # Humanoid Gardening Queues
 
+Historical task-level study, retained from commit 871019c. The statements below
+describe that earlier CPU-only implementation. The new articulated GPU experiment
+is separate; see the current [front page](README.md).
+
 A separate, simulation-only project for a humanoid performing useful gardening
 tasks with queue-aware task coordination.
 

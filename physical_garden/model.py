@@ -22,13 +22,15 @@ def build():
     visual = ET.SubElement(root, "visual")
     ET.SubElement(visual, "global", offwidth="1920", offheight="1080")
     ET.SubElement(visual, "headlight", diffuse=".7 .7 .7", ambient=".35 .35 .35")
+    ET.SubElement(root.find("asset"), "texture", type="skybox", builtin="gradient", rgb1=".83 .88 .86",
+                  rgb2=".83 .88 .86", width="64", height="384")
     world = root.find("worldbody")
     ET.SubElement(world, "light", pos="-1 2 3", dir="0 0 -1", diffuse=".7 .7 .7")
     ET.SubElement(world, "geom", name="floor", type="plane", size="3 3 .1",
                   rgba=".83 .88 .86 1", friction=".8 .01 .001")
-    ET.SubElement(world, "geom", name="bench", type="box", pos=".34 .23 .58",
-                  size=".23 .27 .025", rgba=".47 .56 .59 1")
-    for x in (.14, .54):
+    ET.SubElement(world, "geom", name="bench", type="box", pos=".38 .23 .58",
+                  size=".20 .27 .025", rgba=".47 .56 .59 1")
+    for x in (.20, .55):
         for y in (0., .46):
             ET.SubElement(world, "geom", type="box", pos=f"{x} {y} .28",
                           size=".015 .015 .28", rgba=".3 .4 .43 1")

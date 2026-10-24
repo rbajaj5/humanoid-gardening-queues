@@ -4,7 +4,7 @@ import json
 import unittest
 from pathlib import Path
 import numpy as np
-from physical_garden.model import ROOT, POTS, SOIL_Z
+from physical_garden.model import ROOT, POTS, SOIL_Z, build
 
 OUT = ROOT / "physical_garden/output"
 CONFIG = json.loads((ROOT/"physical_garden/config.json").read_text())
@@ -32,6 +32,11 @@ class PhysicalAudit(unittest.TestCase):
             self.assertTrue(np.isfinite(states["qpos"]).all())
             # Physically free base, rather than hand-animated joints alone.
             self.assertGreater(np.ptp(states["qpos"][:,0]),1e-5)
+
+    def test_tool_has_physical_mass(self):
+        model=build()
+        self.assertAlmostEqual(model.body_mass[model.body("watering_tool_body").id],.18)
+        self.assertAlmostEqual(model.body_subtreemass[model.body("pelvis").id],33.521142)
 
     def test_conservation_and_capacities_every_frame(self):
         for run in self.runs:
@@ -82,6 +87,8 @@ class PhysicalAudit(unittest.TestCase):
         for run in self.runs:
             for path,sha in run["summary"]["source_sha256"].items():
                 self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),sha,path)
+            self.assertEqual(hashlib.sha256((ROOT/"output/model_manifest.json").read_bytes()).hexdigest(),
+                             run["summary"]["model_manifest_sha256"])
 
 
 if __name__ == "__main__":

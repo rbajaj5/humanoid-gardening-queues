@@ -1,0 +1,1063 @@
+[
+  {
+    "name": "timely_timeout_new_id",
+    "policy": "timeout_new_id",
+    "profile": "timely",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.52,
+    "declared_completion_s": 16.84,
+    "max_body_tilt_deg": 1.2471488759838687,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.239999999999998,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.72,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 19.774671999999555,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "timely_idempotent_receipt_only",
+    "policy": "idempotent_receipt_only",
+    "profile": "timely",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.52,
+    "declared_completion_s": 16.84,
+    "max_body_tilt_deg": 1.2471435358734788,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.239999999999998,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.72,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 17.795184000002337,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "timely_queue_aware",
+    "policy": "queue_aware",
+    "profile": "timely",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.119999999999997,
+    "declared_completion_s": 16.24,
+    "max_body_tilt_deg": 1.227946779080279,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.04,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.32,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 16.243315400002757,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "lost_receipts_timeout_new_id",
+    "policy": "timeout_new_id",
+    "profile": "lost_receipts",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      300,
+      0,
+      0
+    ],
+    "emitted_ml": 300,
+    "missed_ml": 0,
+    "overflow_ml": 120.0,
+    "excess_ml": 240.0,
+    "target_pots_completed": 1,
+    "safe_task_success": false,
+    "physical_completion_s": null,
+    "declared_completion_s": null,
+    "max_body_tilt_deg": 0.07708293677436148,
+    "failures": [],
+    "commands_sent": 5,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 12.76,
+        "id": "p0-request1",
+        "pot": 0
+      },
+      {
+        "t": 19.759999999999998,
+        "id": "p0-request2",
+        "pot": 0
+      },
+      {
+        "t": 26.759999999999998,
+        "id": "p0-request3",
+        "pot": 0
+      },
+      {
+        "t": 33.76,
+        "id": "p0-request4",
+        "pot": 0
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 10.746116000009351,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "lost_receipts_idempotent_receipt_only",
+    "policy": "idempotent_receipt_only",
+    "profile": "lost_receipts",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 1,
+    "safe_task_success": false,
+    "physical_completion_s": null,
+    "declared_completion_s": null,
+    "max_body_tilt_deg": 0.07708246954948339,
+    "failures": [],
+    "commands_sent": 5,
+    "duplicates_blocked": 4,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 9.844472600001609,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "lost_receipts_queue_aware",
+    "policy": "queue_aware",
+    "profile": "lost_receipts",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.119999999999997,
+    "declared_completion_s": 16.24,
+    "max_body_tilt_deg": 1.2279533083915235,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.04,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.32,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 11.969786899993778,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "permanent_observation_loss_timeout_new_id",
+    "policy": "timeout_new_id",
+    "profile": "permanent_observation_loss",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.52,
+    "declared_completion_s": 16.84,
+    "max_body_tilt_deg": 1.2471446073257992,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.239999999999998,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.72,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 12.145519400000921,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "permanent_observation_loss_idempotent_receipt_only",
+    "policy": "idempotent_receipt_only",
+    "profile": "permanent_observation_loss",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 3,
+    "safe_task_success": true,
+    "physical_completion_s": 16.52,
+    "declared_completion_s": 16.84,
+    "max_body_tilt_deg": 1.247146935019031,
+    "failures": [],
+    "commands_sent": 3,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      },
+      {
+        "t": 11.239999999999998,
+        "id": "p1-request1",
+        "pot": 1
+      },
+      {
+        "t": 16.72,
+        "id": "p2-request2",
+        "pot": 2
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 12.085509900003672,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  },
+  {
+    "name": "permanent_observation_loss_queue_aware",
+    "policy": "queue_aware",
+    "profile": "permanent_observation_loss",
+    "config": {
+      "seed": 45100,
+      "duration_s": 34.0,
+      "control_dt_s": 0.04,
+      "physics_dt_s": 0.002,
+      "water_dt_s": 0.01,
+      "dose_ml": 60.0,
+      "particle_ml": 1.0,
+      "reservoir_ml": 500.0,
+      "pot_capacity_ml": 180.0,
+      "retry_s": 7.0,
+      "command_delay_s": 0.12,
+      "observation_delay_s": 0.12,
+      "freshness_s": 0.5,
+      "motion_duration_s": 2.5,
+      "pose_tolerance_m": 0.025,
+      "policies": [
+        "timeout_new_id",
+        "idempotent_receipt_only",
+        "queue_aware"
+      ],
+      "profiles": [
+        "timely",
+        "lost_receipts",
+        "permanent_observation_loss"
+      ],
+      "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+    },
+    "input_tape_sha256": "bc7988233ed3cad27f93c43d6e571602aad7d13818a2168a72c2e4cb668a73a9",
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "tool_mass_kg": 0.18,
+    "robot_integration": "MuJoCo Warp CUDA, 2 ms",
+    "water_integration": "Warp CUDA ballistic parcels, 10 ms; 1 ml each",
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "overflow_ml": 0.0,
+    "excess_ml": 0.0,
+    "target_pots_completed": 1,
+    "safe_task_success": false,
+    "physical_completion_s": null,
+    "declared_completion_s": null,
+    "max_body_tilt_deg": 0.07708233404258033,
+    "failures": [],
+    "commands_sent": 1,
+    "duplicates_blocked": 0,
+    "finished_pours": [
+      {
+        "t": 5.76,
+        "id": "p0-request0",
+        "pot": 0
+      }
+    ],
+    "frames": 850,
+    "wall_seconds": 11.485274199993,
+    "ik_target_errors_m": [
+      3.997655434151775e-06,
+      9.819312554327613e-06,
+      1.283978940746838e-05
+    ],
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "source_sha256": {
+      "physical_garden/model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+      "physical_garden/run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+      "physical_garden/water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+    },
+    "config_sha256": "0e21baa9749e129c7fdc73adab256621d67ba07a6c3f34f27339c5ad366b8a8f",
+    "model_manifest_sha256": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d",
+    "pot_centers_xy_m": [
+      [
+        0.25,
+        0.36
+      ],
+      [
+        0.41,
+        0.23
+      ],
+      [
+        0.26,
+        0.1
+      ]
+    ],
+    "nozzle_target_height_m": 0.89,
+    "joint_target_noise_std_rad": 0.00035,
+    "spray_xy_velocity_noise_std_ms": 0.035,
+    "limitations": [
+      "One seed and calibrated scene; no statistical reliability claim",
+      "Hand-authored IK and fixed wrist tool, not learned dexterity",
+      "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",
+      "Ballistic parcels only; no fluid interactions, leaf interception or soil biology",
+      "Synthetic perfect captured-volume observations when available; volatile ID ledger"
+    ]
+  }
+]

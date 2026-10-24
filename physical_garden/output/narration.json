@@ -1,0 +1,42 @@
+[
+  {
+    "start": 0,
+    "end": 7,
+    "text": "This humanoid waters three simulated plants. Its articulated body and the ballistic water parcels run on the NVIDIA GPU."
+  },
+  {
+    "start": 7,
+    "end": 17,
+    "text": "Both sides use the same body controller and disturbances. Each pot should receive sixty millilitres. Completion receipts are lost."
+  },
+  {
+    "start": 17,
+    "end": 30,
+    "text": "On the left, a timeout creates a new command identifier. The executor treats the retry as another watering job, even after the first pour succeeded."
+  },
+  {
+    "start": 30,
+    "end": 43,
+    "text": "On the right, retries keep one identifier. Fresh observations confirm water arriving in the pot, so the coordinator can move to the next plant without a receipt."
+  },
+  {
+    "start": 43,
+    "end": 56,
+    "text": "The blue parcels follow gravity from the measured nozzle pose. Water counts only when a parcel crosses a pot's capture region. The plots report measured delivery, not the intended target."
+  },
+  {
+    "start": 56,
+    "end": 65,
+    "text": "The stable identifier alone blocks duplicate pours, but does not complete the remaining plants when receipts never arrive. Observation-based completion supplies that missing step."
+  },
+  {
+    "start": 65,
+    "end": 78,
+    "text": "There is a cost. Here receipts work, but observations stop. This queue-aware policy holds after the first plant, while the receipt-driven controller continues. More awareness is not automatically better."
+  },
+  {
+    "start": 78,
+    "end": 88,
+    "text": "This is one synthetic configuration, not a reliability claim. The wrist tool is fixed, the water is ballistic, and neither soil physics nor hardware operation has been validated."
+  }
+]

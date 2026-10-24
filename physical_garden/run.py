@@ -73,6 +73,10 @@ class Physics:
 
 def run(physics, policy, profile, config, prefix=""):
     from physical_garden.water import Water
+    if (config["control_dt_s"],config["physics_dt_s"],config["water_dt_s"],config["particle_ml"]) != (.04,.002,.01,1.):
+        raise ValueError("This validated implementation uses fixed 40/2/10 ms steps and 1 ml parcels")
+    if any(config[key] != int(config[key]) for key in ("dose_ml","reservoir_ml")):
+        raise ValueError("Dose and reservoir must be integral parcel volumes")
     physics.restart()
     p, model, data = physics.planner, physics.model, physics.data
     dt = config["control_dt_s"]
@@ -219,9 +223,12 @@ def run(physics, policy, profile, config, prefix=""):
                "frames":len(rows),"wall_seconds":time.perf_counter()-wall_start,
                "ik_target_errors_m":physics.errors,
                "packages":{x:importlib.metadata.version(x) for x in ["mujoco","mujoco-warp","warp-lang","numpy","scipy"]},
-               "source_sha256":{str(f.relative_to(ROOT)):digest(f) for f in
+               "source_sha256":{f.relative_to(ROOT).as_posix():digest(f) for f in
                     [ROOT/"physical_garden"/name for name in ("model.py","run.py","water.py")]},
                "config_sha256":digest(ROOT/"physical_garden/config.json"),
+               "model_manifest_sha256":digest(ROOT/"output/model_manifest.json"),
+               "pot_centers_xy_m":POTS.tolist(),"nozzle_target_height_m":.89,
+               "joint_target_noise_std_rad":.00035,"spray_xy_velocity_noise_std_ms":.035,
                "limitations":["One seed and calibrated scene; no statistical reliability claim",
                  "Hand-authored IK and fixed wrist tool, not learned dexterity",
                  "External reservoir with no hose tension, pressure, recoil or varying tool-water mass",

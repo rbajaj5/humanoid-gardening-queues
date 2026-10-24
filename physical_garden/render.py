@@ -16,7 +16,7 @@ FPS=25
 DURATION=88
 COLORS=["#b65749","#307da0","#8f68a3"]
 SEGMENTS=[
-    (0,7,"This humanoid waters real simulated plant locations. The body and ballistic water parcels run on the NVIDIA GPU."),
+    (0,7,"This humanoid waters three simulated plants. Its articulated body and the ballistic water parcels run on the NVIDIA GPU."),
     (7,17,"Both sides use the same body controller and disturbances. Each pot should receive sixty millilitres. Completion receipts are lost."),
     (17,30,"On the left, a timeout creates a new command identifier. The executor treats the retry as another watering job, even after the first pour succeeded."),
     (30,43,"On the right, retries keep one identifier. Fresh observations confirm water arriving in the pot, so the coordinator can move to the next plant without a receipt."),
@@ -45,29 +45,35 @@ def state_index(time_s):
 class Movie:
     def __init__(self):
         self.model=build()
+        # Rendering quality only; retained physics is never recalculated here.
+        self.model.vis.quality.offsamples=0
+        self.model.vis.quality.shadowsize=1024
         self.data=reset(self.model)
         self.renderer=mujoco.Renderer(self.model,height=590,width=936)
         self.close=mujoco.Renderer(self.model,height=218,width=330)
         self.runs={}
+        self.scene_cache={}
         for profile in ("lost_receipts","permanent_observation_loss","timely"):
             for policy in ("timeout_new_id","queue_aware","idempotent_receipt_only"):
                 name=f"{profile}_{policy}"
                 self.runs[name]=(json.loads((OUT/f"{name}.json").read_text()),np.load(OUT/f"{name}.npz"))
         self.camera=mujoco.MjvCamera()
-        self.camera.lookat[:]=[.20,.17,.70]
-        self.camera.distance=2.05
-        self.camera.azimuth=55
+        self.camera.lookat[:]=[.20,.17,.60]
+        self.camera.distance=2.15
+        self.camera.azimuth=120
         self.camera.elevation=-22
         self.detail_camera=mujoco.MjvCamera()
         self.detail_camera.lookat[:]=[.33,.23,.77]
         self.detail_camera.distance=.80
-        self.detail_camera.azimuth=65
+        self.detail_camera.azimuth=110
         self.detail_camera.elevation=-48
         self.renderer.update_scene(self.data,camera=self.camera)
         self.renderer_name=glGetString(GL_RENDERER).decode()
 
     def scene(self,renderer,camera,particles):
         renderer.update_scene(self.data,camera=camera)
+        renderer.scene.flags[mujoco.mjtRndFlag.mjRND_SHADOW]=False
+        renderer.scene.flags[mujoco.mjtRndFlag.mjRND_REFLECTION]=False
         for point in particles:
             geom=renderer.scene.geoms[renderer.scene.ngeom]
             mujoco.mjv_initGeom(geom,mujoco.mjtGeom.mjGEOM_SPHERE,np.array([.0062,.0062,.0062]),
@@ -91,11 +97,16 @@ class Movie:
             record,states=self.runs[name]
             i=min(i,len(record["frames"])-1)
             row=record["frames"][i]
-            self.data.qpos[:]=states["qpos"][i]
-            self.data.qvel[:]=states["qvel"][i]
-            mujoco.mj_forward(self.model,self.data)
-            image.paste(self.scene(self.renderer,self.camera,record["droplets"][i]),(x,150))
-            detail=self.scene(self.close,self.detail_camera,record["droplets"][i])
+            cached=self.scene_cache.get(name)
+            if cached is None or cached[0]!=i:
+                self.data.qpos[:]=states["qpos"][i]
+                self.data.qvel[:]=states["qvel"][i]
+                mujoco.mj_forward(self.model,self.data)
+                cached=(i,self.scene(self.renderer,self.camera,record["droplets"][i]),
+                        self.scene(self.close,self.detail_camera,record["droplets"][i]))
+                self.scene_cache[name]=cached
+            image.paste(cached[1],(x,150))
+            detail=cached[2]
             image.paste(detail,(x+596,160))
             draw=ImageDraw.Draw(image)
             draw.rectangle((x+595,159,x+927,379),outline="#62767a",width=2)
@@ -176,7 +187,7 @@ def main():
             sources[file.name]=hashlib.sha256(file.read_bytes()).hexdigest()
     (OUT/"movie_frames.json").write_text(json.dumps({"fps":FPS,"duration_s":DURATION,"width":1920,"height":1080,
         "render_device":movie.renderer_name,"encoding":"CPU libx264; physics is CUDA",
-        "coverage":"Complete 34 s lost-receipt and observation-outage timelines for two arms; stable-ID arm summarized from full retained run; timely runs not replayed",
+        "coverage":"All 850 logged states of lost-receipt arms; observation-outage arms span the full 34 s but are temporally subsampled during the 12 s replay. Exact indices retained. Stable-ID arm summarized; timely runs not replayed.",
         "source_sha256":sources,"frames":frames},indent=2)+"\n")
     (OUT/"narration.json").write_text(json.dumps([{"start":a,"end":b,"text":text} for a,b,text in SEGMENTS],indent=2)+"\n")
 
