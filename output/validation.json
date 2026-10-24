@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "tests_run": 9,
+  "test_output": "test_conservation_capacity_and_no_future_observations (test_simulate.MechanismTests.test_conservation_capacity_and_no_future_observations) ... ok\ntest_freshness_controls_advancement (test_simulate.MechanismTests.test_freshness_controls_advancement) ... ok\ntest_no_duplicate_id_can_execute_twice (test_simulate.MechanismTests.test_no_duplicate_id_can_execute_twice) ... ok\ntest_permanent_sensor_loss_exposes_hold_cost (test_simulate.MechanismTests.test_permanent_sensor_loss_exposes_hold_cost) ... ok\ntest_receipt_loss_not_delivery_loss (test_simulate.MechanismTests.test_receipt_loss_not_delivery_loss) ... ok\ntest_repeatable_inputs (test_simulate.MechanismTests.test_repeatable_inputs) ... ok\ntest_timely_controls_all_succeed (test_simulate.MechanismTests.test_timely_controls_all_succeed) ... ok\ntest_all_retained_replays_regenerate (test_simulate.RetainedTests.test_all_retained_replays_regenerate) ... ok\ntest_pairing_and_summary (test_simulate.RetainedTests.test_pairing_and_summary) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.392s\n\nOK\n",
+  "sha256": {
+    "simulate.py": "1490b5ae8cb0bc9f0e6146871db5324fe4d10b97e41c373eda6a19c794209cb6",
+    "config.json": "ba53783dd9d26aa5228b755753f962cddfada433068a290dc8807bd66d8e6549",
+    "output/episodes.csv": "345b24272f75e0d4a02dbcd0068fc64fec85ddd836d064f501108d455ec98575",
+    "output/summary.json": "83c5b4cb90a41fc8d80ab42d9f78cd2c601eaba9362319578af32e283aae11a8",
+    "RESULTS.md": "c5b8929284c7636c59d9cc0bd4e5d46bd2f9f9e5a3b2e68cd00af352fc6ef3e3"
+  }
+}

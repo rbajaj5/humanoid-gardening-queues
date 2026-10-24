@@ -1,0 +1,37 @@
+[
+  {
+    "start": 0,
+    "end": 7,
+    "text": "Three policies share synthetic plants and inputs. This is task coordination, not a humanoid physics simulation.",
+    "raw_duration_s": 8.573061,
+    "tempo": 1.270083111111111
+  },
+  {
+    "start": 7,
+    "end": 15,
+    "text": "Here all completion receipts are lost. New identities turn retries into extra watering. Stable identities stop duplicate pours.",
+    "raw_duration_s": 9.942676,
+    "tempo": 1.2829259354838711
+  },
+  {
+    "start": 15,
+    "end": 23,
+    "text": "But receipts alone leave the second controller waiting. The queue aware controller uses fresh delivery observations and finishes the three plants.",
+    "raw_duration_s": 9.202993,
+    "tempo": 1.1874829677419354
+  },
+  {
+    "start": 23,
+    "end": 32,
+    "text": "Now the sensor stream fails instead. Reliable receipts let the first two controllers finish. The queue aware controller refuses to advance on old observations.",
+    "raw_duration_s": 11.272336,
+    "tempo": 1.2882669714285713
+  },
+  {
+    "start": 32,
+    "end": 42,
+    "text": "The hold leaves two plants unfinished, while the other policies finish without extra water. This is the cost of requiring fresh observations.",
+    "raw_duration_s": 9.612562,
+    "tempo": 1.0
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "width": 1920,
+  "height": 1080,
+  "fps": 25,
+  "frames": 1050,
+  "duration_s": 42,
+  "audio_codec": "aac",
+  "full_decode": "passed",
+  "frame_links_verified": true,
+  "coverage": "Six traces, one preselected seed, two profiles; time-downsampled schematic replay",
+  "video_sha256": "7f81f5562c7c0d5373fc482102598ed087cfd44888c5faa573e8bac3d1a0718d"
+}

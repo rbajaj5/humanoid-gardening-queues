@@ -7,3 +7,4 @@ models/
 .warp-cache/
 output/*.mp4
 output/*.wav
+output/encoded_*.png

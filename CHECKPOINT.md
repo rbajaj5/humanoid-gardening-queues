@@ -7,30 +7,45 @@ Created 2026-10-24 at the user's request as a separate public repository.
 - Established the project scope: humanoid gardening, starting with pot watering.
 - Defined the task-level queue-awareness question and proposed evaluation metrics.
 - Kept it independent of the laundry, Assured Autonomy and RAG repositories.
+- Implemented CPU task-level watering simulation, common exogenous tapes, three
+  policies, six profiles and 256 matched seeds: 4,608 episodes.
+- All 18 preselected full replays regenerate exactly; nine tests pass for pairing,
+  conservation, capacity, timestamp causality, deduplication and outage tradeoffs.
+- Generated RESULTS.md from saved results. Preserved permanent-observation-loss
+  failures, not only successful queue-aware cases.
+- Added one schematic 42 s narrated/captioned MP4 and its frame index. This is
+  task-level accounting/coordination, NOT a humanoid or fluid physics video.
 
 ## Not Yet Implemented
 
-No robot assets, environment, physics engine, moisture model, protocol, tests,
-GPU runs, result counts or videos are present. Do not describe this scaffold as
-a working robot or a completed simulation.
+No articulated robot, realistic soil/fluid physics, GPU dynamics, hardware or
+learned policy. Do not describe the task-level experiment as a gardening robot.
 
 ## Next Work
 
-Inspect the laundry project's pinned model and task adapter as a reference.
-Design the gardening model independently: plant identities, bounded dose
-reservations, actual tool delivery state, water conservation and fresh completion
-observations. Freeze an initial comparison protocol before outcome analysis.
-Validate the physical task before making one narrated, captioned demonstration.
-Keep missing-receipt and duplicated-dose cases separate from low-level motor delay.
+Integrate the laundry project's pinned humanoid model as a reference, with a new
+gardening environment, actual tool states and realistic observation errors.
+Keep the current protocol results separate. Investigate a hybrid that can use
+trustworthy completion receipts during an observation outage; not tested yet.
 
 Only publish assets with verified redistribution rights. No hardware commands,
 real irrigation control, paid API calls or external accounts are configured.
 
-## Inspect
+## Resume / Reproduce
 
 ```powershell
 git status --short
 git log -5 --oneline
+python simulate.py
+python -m unittest -v
+python analyze.py
+python render.py
+.\narrate.ps1 -Python python
+python validate_media.py
 ```
 
-There is no simulator startup command yet.
+Local development Python: ../.venv-laundry-gpu/Scripts/python.exe. This interpreter
+is reused, but the gardening simulation itself runs on CPU and needs no GPU packages.
+Render needs Pillow/FFmpeg and Windows fonts. Release: watering-coordination-v1.
+Input seed 45100 was selected in config.json before outcomes; no parameter sweep.
+Do not change retained results without rerunning analysis, tests, movie and hashes.

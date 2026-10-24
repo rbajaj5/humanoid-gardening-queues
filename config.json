@@ -1,0 +1,22 @@
+{
+  "experiment": "synthetic_watering_receipt_coordination_v1",
+  "dt_s": 0.1,
+  "duration_s": 50,
+  "seed_start": 45100,
+  "seed_count": 256,
+  "replay_seed": 45100,
+  "policies": ["timeout_new_id", "idempotent_receipt_only", "queue_aware"],
+  "profiles": ["timely", "late_receipts", "lost_receipts", "temporary_sensor_outage", "permanent_sensor_outage", "combined"],
+  "observation_period_ticks": 2,
+  "freshness_s": 0.5,
+  "retry_s": 4.0,
+  "initial_tank_ml": 1000,
+  "pot_capacity_ml": 450,
+  "target_water_ml": 300,
+  "initial_pot_water_range_ml": [180, 230],
+  "flow_range_ml_per_s": [45, 65],
+  "travel_range_s": [0.6, 1.0],
+  "dose_tolerance_ml": 1,
+  "compute": "CPU discrete-time task model, not humanoid or fluid physics",
+  "freeze": "Configuration written before the first aggregate run; exploratory, not preregistered."
+}
