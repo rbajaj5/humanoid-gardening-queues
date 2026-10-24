@@ -50,7 +50,8 @@ def build():
                       size=".007", rgba=".1 .7 .55 1")
     # A rigid calibrated wrist attachment avoids pretending to simulate dexterous fingers.
     left = root.find(".//body[@name='left_wrist_yaw_link']")
-    ET.SubElement(left, "geom", name="watering_tool", type="capsule", fromto=".025 .003 0 .085 .003 0",
+    tool = ET.SubElement(left, "body", name="watering_tool_body")
+    ET.SubElement(tool, "geom", name="watering_tool", type="capsule", fromto=".025 .003 0 .085 .003 0",
                   size=".014", mass=".18", rgba=".09 .65 .74 1", contype="0", conaffinity="0")
     return mujoco.MjModel.from_xml_string(ET.tostring(root, encoding="unicode"))
 
@@ -81,6 +82,9 @@ class Planner:
         self.wrist = model.body("left_wrist_yaw_link").id
         self.rotation = d.xmat[self.wrist].copy().reshape(3, 3)
         self.nozzle_axis = self.rotation.T @ np.array([0., 0., -1.])
+        self.arm_actuators = [a for a in range(29) if model.actuator(a).name.startswith(
+            ("left_shoulder", "left_elbow", "left_wrist"))]
+        self.arm_dofs = [model.jnt_dofadr[model.actuator_trnid[a,0]] for a in self.arm_actuators]
         joints = [model.actuator_trnid[a, 0] for a in range(29)]
         self.lower = np.r_[[-.15, -.12, .62], model.jnt_range[joints, 0]+.001]
         self.upper = np.r_[[.20, .12, .82], model.jnt_range[joints, 1]-.001]
@@ -104,6 +108,19 @@ class Planner:
         self.previous = fit.x
         residual(fit.x)
         return self.data.qpos[7:36].copy(), float(np.linalg.norm(self.data.site_xpos[self.hands[0]]-target))
+
+    def nozzle_feedback(self, data, target, offset):
+        """Measured Cartesian error changes joint targets, never the simulated pose."""
+        jp, jr = np.zeros((3,self.model.nv)), np.zeros((3,self.model.nv))
+        mujoco.mj_jacSite(self.model,data,jp,jr,self.hands[0])
+        actual = data.xmat[self.wrist].reshape(3,3)
+        angular = .5*sum(np.cross(actual[:,j],self.rotation[:,j]) for j in range(3))
+        error = np.r_[np.asarray(target)-data.site_xpos[self.hands[0]],.08*angular]
+        jac = np.vstack([jp[:,self.arm_dofs],.08*jr[:,self.arm_dofs]])
+        delta = .35*jac.T @ np.linalg.solve(jac @ jac.T + .0001*np.eye(6),error)
+        result = offset.copy()
+        result[self.arm_actuators] = np.clip(result[self.arm_actuators]+np.clip(delta,-.02,.02),-.25,.25)
+        return result
 
     def balance(self, control, data):
         result = control.copy()

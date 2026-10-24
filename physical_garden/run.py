@@ -87,6 +87,7 @@ def run(physics, policy, profile, config, prefix=""):
     pending, next_pot, serial, last_send = None, 0, 0, -100.
     latest, issued_at, duplicates, commands = None, 0., 0, 0
     pose_ctrl = data.ctrl.copy()
+    feedback = np.zeros(29)
     rows, qpos, qvel, controls, droplets = [], [], [], [], []
     failures, finished = [], []
     wall_start = time.perf_counter()
@@ -143,14 +144,17 @@ def run(physics, policy, profile, config, prefix=""):
                 transport.remove((at,cid,pot))
         if current is None and queue:
             cid,pot = queue.pop(0)
-            current = {"id":cid,"pot":pot,"start":t,"emitted":0,"from":pose_ctrl.copy()}
+            current = {"id":cid,"pot":pot,"start":t,"emitted":0,"from":pose_ctrl.copy()+feedback}
+            feedback = np.zeros(29)
             emission_after = None
             events.append({"t":t,"event":"SKILL_START","id":cid,"pot":pot})
         if current is not None:
             f = min(1.,(t-current["start"])/config["motion_duration_s"])
             f = f*f*(3-2*f)
             pose_ctrl = (1-f)*current["from"]+f*physics.targets[current["pot"]]
-        ctrl = p.balance(pose_ctrl+disturbances[k],data)
+            if t-current["start"] >= config["motion_duration_s"]:
+                feedback = p.nozzle_feedback(data,np.r_[POTS[current["pot"]],.89],feedback)
+        ctrl = p.balance(pose_ctrl+feedback+disturbances[k],data)
         physics.step(ctrl)
         nozzle = data.site_xpos[p.hands[0]].copy()
         direction = data.xmat[p.wrist].reshape(3,3) @ p.nozzle_axis
