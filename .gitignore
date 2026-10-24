@@ -8,3 +8,7 @@ models/
 output/*.mp4
 output/*.wav
 output/encoded_*.png
+physical_garden/output/*.mp4
+physical_garden/output/*.wav
+physical_garden/output/*.log
+physical_garden/output/encoded_*.png

@@ -1,0 +1,20 @@
+{
+  "seed": 45100,
+  "duration_s": 34.0,
+  "control_dt_s": 0.04,
+  "physics_dt_s": 0.002,
+  "water_dt_s": 0.01,
+  "dose_ml": 60.0,
+  "particle_ml": 1.0,
+  "reservoir_ml": 500.0,
+  "pot_capacity_ml": 180.0,
+  "retry_s": 7.0,
+  "command_delay_s": 0.12,
+  "observation_delay_s": 0.12,
+  "freshness_s": 0.5,
+  "motion_duration_s": 2.5,
+  "pose_tolerance_m": 0.025,
+  "policies": ["timeout_new_id", "idempotent_receipt_only", "queue_aware"],
+  "profiles": ["timely", "lost_receipts", "permanent_observation_loss"],
+  "description": "One fixed synthetic setup and matched input tape; not a population-level reliability estimate."
+}
