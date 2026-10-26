@@ -1,0 +1,3522 @@
+[
+  {
+    "name": "nominal_memory_only_45110",
+    "profile": "nominal",
+    "policy": "memory_only",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451601338965712,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.54117449995829,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_idempotent_45110",
+    "profile": "nominal",
+    "policy": "idempotent",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451681449389727,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.44354499998735,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_identity_freshness_45110",
+    "profile": "nominal",
+    "policy": "identity_freshness",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.245162475182332,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.43716799997492,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_queue_aware_45110",
+    "profile": "nominal",
+    "policy": "queue_aware",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451669510684134,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.416512199968565,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_memory_only_45110",
+    "profile": "checkpoint_replay",
+    "policy": "memory_only",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2883872847997409,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.936194799956866,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_idempotent_45110",
+    "profile": "checkpoint_replay",
+    "policy": "idempotent",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451657913096286,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.36755839997204,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_identity_freshness_45110",
+    "profile": "checkpoint_replay",
+    "policy": "identity_freshness",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451692022833267,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.523764899990056,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_queue_aware_45110",
+    "profile": "checkpoint_replay",
+    "policy": "queue_aware",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451651526161562,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.435889999964274,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_memory_only_45110",
+    "profile": "shared_snapshot",
+    "policy": "memory_only",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2884104601726305,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 14.674534399993718,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_idempotent_45110",
+    "profile": "shared_snapshot",
+    "policy": "idempotent",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.288396191398188,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 13.90540729998611,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_identity_freshness_45110",
+    "profile": "shared_snapshot",
+    "policy": "identity_freshness",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2883939389712806,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 13.90854059997946,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_queue_aware_45110",
+    "profile": "shared_snapshot",
+    "policy": "queue_aware",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451643083848771,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 3,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 14.133950499992352,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_memory_only_45110",
+    "profile": "stale_recall",
+    "policy": "memory_only",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2466380657198208,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.920889399945736,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_idempotent_45110",
+    "profile": "stale_recall",
+    "policy": "idempotent",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2466335812482472,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.92924209998455,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_identity_freshness_45110",
+    "profile": "stale_recall",
+    "policy": "identity_freshness",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451646942899577,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 1,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.557186000049114,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_queue_aware_45110",
+    "profile": "stale_recall",
+    "policy": "queue_aware",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451636566016353,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 1,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.59425119997468,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_memory_only_45110",
+    "profile": "observation_outage",
+    "policy": "memory_only",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451671811663794,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.479775200015865,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_idempotent_45110",
+    "profile": "observation_outage",
+    "policy": "idempotent",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2451627904276588,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.47112680005375,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_identity_freshness_45110",
+    "profile": "observation_outage",
+    "policy": "identity_freshness",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 120,
+    "pots_at_target": 1,
+    "task_success": false,
+    "first_all_targets_reached_s": null,
+    "failures": [],
+    "max_body_tilt_deg": 0.09397694111189432,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 34.28,
+    "frames": 1000,
+    "wall_seconds": 27.102588399953675,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_queue_aware_45110",
+    "profile": "observation_outage",
+    "policy": "queue_aware",
+    "seed": 45110,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "8f4c44bfa8a49fc5300b1535f0d445a85790af307eddb3f16f8d334048a55239",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 120,
+    "pots_at_target": 1,
+    "task_success": false,
+    "first_all_targets_reached_s": null,
+    "failures": [],
+    "max_body_tilt_deg": 0.09397698891891396,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 34.28,
+    "frames": 1000,
+    "wall_seconds": 27.09157469996717,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_memory_only_45111",
+    "profile": "nominal",
+    "policy": "memory_only",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.253822976434346,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.536325599998236,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_idempotent_45111",
+    "profile": "nominal",
+    "policy": "idempotent",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.253828458527714,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.57508489995962,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_identity_freshness_45111",
+    "profile": "nominal",
+    "policy": "identity_freshness",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538239735475387,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.58420899999328,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "nominal_queue_aware_45111",
+    "profile": "nominal",
+    "policy": "queue_aware",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538271510786292,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.44046379998326,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_memory_only_45111",
+    "profile": "checkpoint_replay",
+    "policy": "memory_only",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538242479193533,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.067134899960365,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_idempotent_45111",
+    "profile": "checkpoint_replay",
+    "policy": "idempotent",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.253826737020175,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.49277269997401,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_identity_freshness_45111",
+    "profile": "checkpoint_replay",
+    "policy": "identity_freshness",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538154972980393,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.53949180000927,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "checkpoint_replay_queue_aware_45111",
+    "profile": "checkpoint_replay",
+    "policy": "queue_aware",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538178569870198,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 3,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.52778080001008,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_memory_only_45111",
+    "profile": "shared_snapshot",
+    "policy": "memory_only",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538260912654617,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.846009899978526,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_idempotent_45111",
+    "profile": "shared_snapshot",
+    "policy": "idempotent",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538316595685877,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 31.043876599986106,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_identity_freshness_45111",
+    "profile": "shared_snapshot",
+    "policy": "identity_freshness",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538304741758854,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.78983809996862,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "shared_snapshot_queue_aware_45111",
+    "profile": "shared_snapshot",
+    "policy": "queue_aware",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538254337377197,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 3,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.77269569999771,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_memory_only_45111",
+    "profile": "stale_recall",
+    "policy": "memory_only",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2564574627010412,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 31.97185430000536,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_idempotent_45111",
+    "profile": "stale_recall",
+    "policy": "idempotent",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      120,
+      120,
+      120
+    ],
+    "emitted_ml": 360,
+    "missed_ml": 0,
+    "excess_ml": 180,
+    "shortfall_ml": 0,
+    "pots_at_target": 0,
+    "task_success": false,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.256466095051958,
+    "commands_accepted": 6,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.65987249999307,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_identity_freshness_45111",
+    "profile": "stale_recall",
+    "policy": "identity_freshness",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538195731798392,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 1,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 30.983303699991666,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "stale_recall_queue_aware_45111",
+    "profile": "stale_recall",
+    "policy": "queue_aware",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538284432494384,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 1,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.4213785000029,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_memory_only_45111",
+    "profile": "observation_outage",
+    "policy": "memory_only",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538308779982856,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 33.24737210001331,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_idempotent_45111",
+    "profile": "observation_outage",
+    "policy": "idempotent",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      60,
+      60
+    ],
+    "emitted_ml": 180,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 0,
+    "pots_at_target": 3,
+    "task_success": true,
+    "first_all_targets_reached_s": 16.04,
+    "failures": [],
+    "max_body_tilt_deg": 1.2538257657124738,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 0.0,
+    "frames": 1000,
+    "wall_seconds": 32.508869000012055,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_identity_freshness_45111",
+    "profile": "observation_outage",
+    "policy": "identity_freshness",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 120,
+    "pots_at_target": 1,
+    "task_success": false,
+    "first_all_targets_reached_s": null,
+    "failures": [],
+    "max_body_tilt_deg": 0.07194100105357912,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 34.28,
+    "frames": 1000,
+    "wall_seconds": 26.62285529996734,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  },
+  {
+    "name": "observation_outage_queue_aware_45111",
+    "profile": "observation_outage",
+    "policy": "queue_aware",
+    "seed": 45111,
+    "gpu_physics": true,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "robot_mass_kg": 33.521142,
+    "integration": "MuJoCo Warp CUDA 2 ms; Warp CUDA ballistic water 10 ms",
+    "controller": "CPU hand-authored IK/feedback and protocol; no trained policy or vendor API",
+    "input_tape_sha256": "ab15ef422cc2794dd18659046f4c891c0ef0480c304d05153bf537a802ed090d",
+    "fingerprint": {
+      "config": {
+        "seeds": [
+          45110,
+          45111
+        ],
+        "duration_s": 40.0,
+        "control_dt_s": 0.04,
+        "physics_dt_s": 0.002,
+        "water_dt_s": 0.01,
+        "target_ml": 60,
+        "reservoir_ml": 500,
+        "pot_capacity_ml": 180,
+        "freshness_s": 0.5,
+        "observation_delay_s": 0.12,
+        "command_delay_s": 0.12,
+        "motion_duration_s": 2.5,
+        "pose_tolerance_m": 0.025,
+        "initial_plan_s": 0.4,
+        "checkpoint_replay_s": 3.0,
+        "stale_recall_s": 20.0,
+        "observation_outage_s": 1.0,
+        "joint_noise_std_rad": 0.00035,
+        "spray_noise_std_ms": 0.035,
+        "policies": [
+          "memory_only",
+          "idempotent",
+          "identity_freshness",
+          "queue_aware"
+        ],
+        "profiles": [
+          "nominal",
+          "checkpoint_replay",
+          "shared_snapshot",
+          "stale_recall",
+          "observation_outage"
+        ],
+        "scope": "Exploratory, two matched seeds in one calibrated physical scene. No vendor implementation or LLM calls."
+      },
+      "sources": {
+        "memory_study\\run.py": "2d5768ccc579e5fb298ee23fa907eac434e05e9289bd88e181ad36e6b2f6d4b7",
+        "memory_study\\protocol.py": "e95404a93db58777fcce7feebd6e0459784dd82a593c9f8703f332c3644771a9",
+        "memory_study\\config.json": "ba46e00607ba634082897cd5a3ea63933a09b8569f113c10ee98e0c3cde5e71c",
+        "physical_garden\\model.py": "d791e7f58a29cd10b55febf40424eee6c3b492f776583a362deaafdf7a65a295",
+        "physical_garden\\run.py": "52ddf470d2dbeec4990dc84c9c46b5d4775c62c05d5fd2b81f65b459a949fe6b",
+        "physical_garden\\water.py": "0f1a4ecd4bfbab4180d7441dd4631f3b26c34dba89e8ffc0422778f872bc04f2"
+      },
+      "model_manifest": "04ac7c568150bdb6f30f916a32cf5dfd9c0983005f1679fd3aa6a771e8f8985d"
+    },
+    "delivered_ml": [
+      60,
+      0,
+      0
+    ],
+    "emitted_ml": 60,
+    "missed_ml": 0,
+    "excess_ml": 0,
+    "shortfall_ml": 120,
+    "pots_at_target": 1,
+    "task_success": false,
+    "first_all_targets_reached_s": null,
+    "failures": [],
+    "max_body_tilt_deg": 0.0719420633085968,
+    "commands_accepted": 3,
+    "duplicate_ids_blocked": 0,
+    "commitment_conflicts_blocked": 0,
+    "old_observations_rejected": 0,
+    "hold_time_s": 34.28,
+    "frames": 1000,
+    "wall_seconds": 26.65530129999388,
+    "packages": {
+      "mujoco": "3.17.0",
+      "mujoco-warp": "3.17.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.4.6"
+    }
+  }
+]

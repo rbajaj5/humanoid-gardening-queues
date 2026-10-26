@@ -1,0 +1,110 @@
+{
+  "decoded_frames": 1500,
+  "frame_links_checked": 1500,
+  "encoded_frame_checks": [
+    {
+      "frame": 125,
+      "mean_absolute_pixel_error": 1.2272080761316873
+    },
+    {
+      "frame": 250,
+      "mean_absolute_pixel_error": 1.1516102430555555
+    },
+    {
+      "frame": 425,
+      "mean_absolute_pixel_error": 1.2051117219650205
+    },
+    {
+      "frame": 550,
+      "mean_absolute_pixel_error": 1.167495820473251
+    },
+    {
+      "frame": 725,
+      "mean_absolute_pixel_error": 1.242269804526749
+    },
+    {
+      "frame": 850,
+      "mean_absolute_pixel_error": 1.2078896604938272
+    },
+    {
+      "frame": 1025,
+      "mean_absolute_pixel_error": 1.1788557741769548
+    },
+    {
+      "frame": 1150,
+      "mean_absolute_pixel_error": 1.197747556584362
+    },
+    {
+      "frame": 1325,
+      "mean_absolute_pixel_error": 1.1972591949588478
+    },
+    {
+      "frame": 1450,
+      "mean_absolute_pixel_error": 1.1907576195987655
+    }
+  ],
+  "video_sha256": "238c1c137859a9584f7087706bf813c1e8954bba5c3ce70d0d04ab8592898549",
+  "audio": "none; explanatory captions burned into the video",
+  "coverage": {
+    "nominal_memory_only_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "nominal_queue_aware_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "checkpoint_replay_memory_only_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "checkpoint_replay_idempotent_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "shared_snapshot_identity_freshness_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "shared_snapshot_queue_aware_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "stale_recall_idempotent_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "stale_recall_identity_freshness_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "observation_outage_memory_only_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    },
+    "observation_outage_queue_aware_45110": {
+      "shown_unique_samples": 251,
+      "retained_samples": 1000,
+      "first_index": 0,
+      "last_index": 999
+    }
+  }
+}

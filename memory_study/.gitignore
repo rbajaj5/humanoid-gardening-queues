@@ -1,0 +1,5 @@
+__pycache__/
+output/*.mp4
+output/*.log
+output/*.wav
+output/encoded_*.png

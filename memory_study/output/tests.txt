@@ -1,0 +1,32 @@
+test_arrival_order_baseline_uses_old_recall (memory_study.test_protocol.ProtocolTests.test_arrival_order_baseline_uses_old_recall) ... ok
+test_atomic_budget_blocks_different_ids_for_same_pot (memory_study.test_protocol.ProtocolTests.test_atomic_budget_blocks_different_ids_for_same_pot) ... ok
+test_budget_is_not_released_when_job_starts (memory_study.test_protocol.ProtocolTests.test_budget_is_not_released_when_job_starts) ... ok
+test_freshness_boundary_and_future_dates (memory_study.test_protocol.ProtocolTests.test_freshness_boundary_and_future_dates) ... ok
+test_idempotence_does_not_deduplicate_two_agents_intent (memory_study.test_protocol.ProtocolTests.test_idempotence_does_not_deduplicate_two_agents_intent) ... ok
+test_identity_payload_collision_fails (memory_study.test_protocol.ProtocolTests.test_identity_payload_collision_fails) ... ok
+test_old_retrieval_cannot_replace_new_observation (memory_study.test_protocol.ProtocolTests.test_old_retrieval_cannot_replace_new_observation) ... ok
+test_queued_work_waits_if_observations_expire (memory_study.test_protocol.ProtocolTests.test_queued_work_waits_if_observations_expire) ... ok
+test_resume_identity_is_stable_except_baseline (memory_study.test_protocol.ProtocolTests.test_resume_identity_is_stable_except_baseline) ... ok
+test_retransmission_never_reexecutes_same_id (memory_study.test_protocol.ProtocolTests.test_retransmission_never_reexecutes_same_id) ... ok
+test_body_and_aim_envelopes (physical_garden.test_physics.PhysicalAudit.test_body_and_aim_envelopes) ... ok
+test_conservation_and_capacities_every_frame (physical_garden.test_physics.PhysicalAudit.test_conservation_and_capacities_every_frame) ... ok
+test_idempotence_and_freshness (physical_garden.test_physics.PhysicalAudit.test_idempotence_and_freshness) ... ok
+test_real_cuda_and_complete_replay (physical_garden.test_physics.PhysicalAudit.test_real_cuda_and_complete_replay) ... ok
+test_shared_noise_and_parameters (physical_garden.test_physics.PhysicalAudit.test_shared_noise_and_parameters) ... ok
+test_source_integrity (physical_garden.test_physics.PhysicalAudit.test_source_integrity) ... ok
+test_task_completion_derived_from_measurements (physical_garden.test_physics.PhysicalAudit.test_task_completion_derived_from_measurements) ... ok
+test_tool_has_physical_mass (physical_garden.test_physics.PhysicalAudit.test_tool_has_physical_mass) ... ok
+test_conservation_capacity_and_no_future_observations (test_simulate.MechanismTests.test_conservation_capacity_and_no_future_observations) ... ok
+test_freshness_controls_advancement (test_simulate.MechanismTests.test_freshness_controls_advancement) ... ok
+test_no_duplicate_id_can_execute_twice (test_simulate.MechanismTests.test_no_duplicate_id_can_execute_twice) ... ok
+test_permanent_sensor_loss_exposes_hold_cost (test_simulate.MechanismTests.test_permanent_sensor_loss_exposes_hold_cost) ... ok
+test_receipt_loss_not_delivery_loss (test_simulate.MechanismTests.test_receipt_loss_not_delivery_loss) ... ok
+test_repeatable_inputs (test_simulate.MechanismTests.test_repeatable_inputs) ... ok
+test_timely_controls_all_succeed (test_simulate.MechanismTests.test_timely_controls_all_succeed) ... ok
+test_all_retained_replays_regenerate (test_simulate.RetainedTests.test_all_retained_replays_regenerate) ... ok
+test_pairing_and_summary (test_simulate.RetainedTests.test_pairing_and_summary) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.824s
+
+OK

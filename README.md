@@ -1,11 +1,72 @@
 # Humanoid Gardening Queues
 
+**GPU-physics experiments in queue-aware coordination: remembering a task is not
+the same as having authority to execute it.**
+
+## New: Engineering Memory and Physical Actions
+
+[![Watch the engineering-memory GPU comparison](memory_study/output/preview_2.jpg)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-gpu-2026-10-26/engineering_memory_gpu.mp4)
+
+**[Watch or download the new MP4 (60 seconds, 1080p, bilingual labels and English captions; silent)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-gpu-2026-10-26/engineering_memory_gpu.mp4)**
+
+The same mass-bearing humanoid waters three plants while four execution policies
+handle plan replay, shared task state, stale observations, and an observation
+outage. **MuJoCo Warp CUDA integrates the robot; Warp CUDA integrates ballistic
+water parcels.** The task controller, rendering and encoding are separate from
+GPU physics. These are synthetic experiments, not hardware or vendor validation.
+
+Chinese engineering documentation motivates the distinctions between session
+state, long-term memory and shared team knowledge. We test our own operational
+interpretations, not Alibaba or Tencent implementations or an LLM's memory.
+In the shared-state case, two software planners coordinate **one physical robot**.
+
+### New Measured Results
+
+Five scenarios x four policies x two matched seeds = **40 episodes**, each 40 s.
+The target is **60 ml per pot**. Entries below are measured water captured by
+pots A / B / C, in ml; both seeds produced these dose outcomes.
+
+| Scenario | Memory only | Stable IDs | IDs + freshness | Queue-aware budget |
+|---|---:|---:|---:|---:|
+| Nominal | 60 / 60 / 60 | 60 / 60 / 60 | 60 / 60 / 60 | 60 / 60 / 60 |
+| Same plan replayed | 120 / 120 / 120 | 60 / 60 / 60 | 60 / 60 / 60 | 60 / 60 / 60 |
+| Two planners, shared snapshot | 120 / 120 / 120 | 120 / 120 / 120 | 120 / 120 / 120 | 60 / 60 / 60 |
+| Old snapshot recalled | 120 / 120 / 120 | 120 / 120 / 120 | 60 / 60 / 60 | 60 / 60 / 60 |
+| Observations stop | 60 / 60 / 60 | 60 / 60 / 60 | 60 / 0 / 0 | 60 / 0 / 0 |
+
+Stable IDs address replayed commands; timestamps address stale evidence; the
+queue-aware policy additionally reserves a shared per-pot budget for queued,
+active and completed pours in the same watering cycle. Distinct planners can
+have different IDs for the same physical intention, so deduplication alone does
+not address that case.
+
+**The cost is visible:** during the outage, freshness-gated policies hold for
+34.28 s and leave a 120 ml total shortfall. Excess above the 60 ml task target
+is not necessarily pot overflow or plant damage. Two seeds and deliberately
+constructed faults do not establish field reliability or general superiority.
+
+**Validation:** 27 tests passed; the independent trace audit covers all 40,000
+retained states. All 1,500 encoded video frames decode, with source-state links
+and sampled image comparisons checked. The video illustrates seed 45110 only:
+each shown episode samples 251 of its 1,000 states across its full 40 s duration.
+It does not depict aggregate outcomes as a single trajectory.
+
+- [Study, Chinese documentation and reproducible commands](memory_study/README.md)
+- [Full measured results](memory_study/output/RESULTS.md) and [episode summaries](memory_study/output/summaries.json)
+- [Trace audit](memory_study/output/validation.json), [video audit](memory_study/output/media_validation.json), and [frame-to-state mapping](memory_study/output/movie_frames.json)
+- [Configuration](memory_study/config.json), [coordination policies](memory_study/protocol.py), and [CUDA experiment runner](memory_study/run.py)
+
+The earlier physical and task-level studies remain intact below; their sample
+counts are separate from this new suite.
+
+## Earlier: Missing Receipts and Watering Progress
+
 **A mass-bearing humanoid waters three plants in GPU physics, while three task
 coordinators handle the same missing receipts and observation failures.**
 
 [![Watch the GPU humanoid watering comparison](physical_garden/output/preview_300.jpg)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/gpu-watering-2026-10-24/humanoid_gardening_gpu.mp4)
 
-**[Watch the new narrated, captioned MP4 (88 seconds, 1080p)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/gpu-watering-2026-10-24/humanoid_gardening_gpu.mp4)**
+**[Watch the earlier narrated, captioned MP4 (88 seconds, 1080p)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/gpu-watering-2026-10-24/humanoid_gardening_gpu.mp4)**
 
 Synthetic simulation only. The humanoid's free base, joints, actuator limits,
 mass distribution and ground contacts are integrated with **MuJoCo Warp on an

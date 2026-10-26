@@ -1,0 +1,442 @@
+[
+  {
+    "profile": "nominal",
+    "policy": "memory_only",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "nominal",
+    "policy": "idempotent",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "nominal",
+    "policy": "identity_freshness",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "nominal",
+    "policy": "queue_aware",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "checkpoint_replay",
+    "policy": "memory_only",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "checkpoint_replay",
+    "policy": "idempotent",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "checkpoint_replay",
+    "policy": "identity_freshness",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "checkpoint_replay",
+    "policy": "queue_aware",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "shared_snapshot",
+    "policy": "memory_only",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "shared_snapshot",
+    "policy": "idempotent",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "shared_snapshot",
+    "policy": "identity_freshness",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "shared_snapshot",
+    "policy": "queue_aware",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "stale_recall",
+    "policy": "memory_only",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "stale_recall",
+    "policy": "idempotent",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 180.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        120,
+        120,
+        120
+      ],
+      "45111": [
+        120,
+        120,
+        120
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "stale_recall",
+    "policy": "identity_freshness",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "stale_recall",
+    "policy": "queue_aware",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "observation_outage",
+    "policy": "memory_only",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "observation_outage",
+    "policy": "idempotent",
+    "runs": 2,
+    "successes": 2,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 0.0,
+    "mean_hold_s": 0.0,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        60,
+        60
+      ],
+      "45111": [
+        60,
+        60,
+        60
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "observation_outage",
+    "policy": "identity_freshness",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 120.0,
+    "mean_hold_s": 34.28,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        0,
+        0
+      ],
+      "45111": [
+        60,
+        0,
+        0
+      ]
+    },
+    "body_failures": 0
+  },
+  {
+    "profile": "observation_outage",
+    "policy": "queue_aware",
+    "runs": 2,
+    "successes": 0,
+    "mean_excess_ml": 0.0,
+    "mean_shortfall_ml": 120.0,
+    "mean_hold_s": 34.28,
+    "delivered_ml_by_seed": {
+      "45110": [
+        60,
+        0,
+        0
+      ],
+      "45111": [
+        60,
+        0,
+        0
+      ]
+    },
+    "body_failures": 0
+  }
+]

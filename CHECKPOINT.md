@@ -1,7 +1,25 @@
 # Gardening GPU Checkpoint
 
-Updated 2026-10-24. Separate public repository:
+Updated 2026-10-26. Separate public repository:
 https://github.com/rbajaj5/humanoid-gardening-queues
+
+## New Engineering-Memory Study
+
+The root README now features the separate `memory_study/` comparison, while all
+earlier experiments below remain unchanged. See `memory_study/CHECKPOINT.md` for
+full parameters and exact resume commands. Forty CUDA episodes, two matched
+seeds, 27 passing tests and a full 40,000-state audit are complete. One 60 s
+1080p silent, captioned replay illustrates five scenarios from seed 45110.
+
+Publishing target: release `engineering-memory-gpu-2026-10-26` with
+`engineering_memory_gpu.mp4`. Verify the release asset before treating the
+front-page download as published. MP4 SHA256:
+238c1c137859a9584f7087706bf813c1e8954bba5c3ce70d0d04ab8592898549.
+GPU physics, CPU task logic, and rendering/encoding are explicitly distinguished.
+The shared-snapshot case has two software planners and one physical humanoid.
+Outage-induced holds and shortfalls are retained, not hidden by the headline.
+
+The remaining sections record the earlier 2026-10-24 study.
 
 ## Completed Physics and Evidence
 
