@@ -11,9 +11,12 @@ full parameters and exact resume commands. Forty CUDA episodes, two matched
 seeds, 27 passing tests and a full 40,000-state audit are complete. One 60 s
 1080p silent, captioned replay illustrates five scenarios from seed 45110.
 
-Publishing target: release `engineering-memory-gpu-2026-10-26` with
-`engineering_memory_gpu.mp4`. Verify the release asset before treating the
-front-page download as published. MP4 SHA256:
+Published release: `engineering-memory-gpu-2026-10-26`, targeting source commit
+`05d23ecd274b032fe6deb51989e5e6f05781d50a`, with `engineering_memory_gpu.mp4`.
+GitHub's asset digest and size (4,941,150 bytes) match the validated local video.
+The remote README's video link and result table were read back successfully.
+https://github.com/rbajaj5/humanoid-gardening-queues/releases/tag/engineering-memory-gpu-2026-10-26
+MP4 SHA256:
 238c1c137859a9584f7087706bf813c1e8954bba5c3ce70d0d04ab8592898549.
 GPU physics, CPU task logic, and rendering/encoding are explicitly distinguished.
 The shared-snapshot case has two software planners and one physical humanoid.

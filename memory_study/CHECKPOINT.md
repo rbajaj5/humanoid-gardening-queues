@@ -37,9 +37,13 @@ Two software planners share one humanoid in the shared-snapshot profile.
   Each illustrated run shows 251/1000 retained samples spanning its full duration;
   only seed 45110 is illustrated, while both seeds remain in the results.
 - MP4 SHA256: 238c1c137859a9584f7087706bf813c1e8954bba5c3ce70d0d04ab8592898549.
-- Evidence is in `memory_study/output/`. Publishing target is GitHub release
-  `engineering-memory-gpu-2026-10-26`; verify its asset digest before reporting
-  publication complete. The MP4 is a release asset, not a Git-tracked binary.
+- Published evidence is in `memory_study/output/` at source commit
+  `05d23ecd274b032fe6deb51989e5e6f05781d50a`. GitHub release
+  `engineering-memory-gpu-2026-10-26` targets that commit. Its MP4 asset is
+  4,941,150 bytes; GitHub's SHA256 matches the validated local video above.
+  The MP4 is a release asset, not a Git-tracked binary. The remote root README
+  was read back with the featured preview, video link and measured result table.
+  https://github.com/rbajaj5/humanoid-gardening-queues/releases/tag/engineering-memory-gpu-2026-10-26
 - Final visual inspection covered encoded frames in all five cases: robot and
   plants visible, bilingual labels legible, no text overlap, and dose/queue/hold
   telemetry agrees with the retained comparison. No visual repairs were needed.
