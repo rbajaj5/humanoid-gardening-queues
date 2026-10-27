@@ -86,17 +86,19 @@ depict aggregate outcomes as a single trajectory. The original silent reel's
 The earlier physical and task-level studies remain intact below; their sample
 counts are separate from this new suite.
 
-### Related: Sixteen Flying Agents, Four Shared Landing Pads
+### Related: Neural Hanzi with Drone Landing Close-Ups
 
-The [new narrated GPU fleet demonstration](https://github.com/rbajaj5/delay-aware-runtime-assurance-lab/tree/main/experiments/20261027_gpu_fleet_scaleup)
+The [new Neural Hanzi landing lesson](https://github.com/rbajaj5/delay-aware-runtime-assurance-lab/tree/main/experiments/20261027_gpu_fleet_scaleup/neural_hanzi)
 extends Ravi Bajaj's queue-aware research illustration from one physical robot
-to sixteen quadrotors. It compares releasing a reservation on silence with retaining
-it until fresh completion evidence arrives. The 3:21 film shows measured CUDA
-rigid-body flight, persistent xyz trails, synchronized altitude/task records,
-English narration and Mandarin terms. Its **48 exploratory episodes are separate**
-from the gardening study. With lost acceptance receipts, the tested timeout policy
-double-books pads; with lost telemetry, the queue-aware fleet leaves 12 tasks
-waiting. The earlier four-drone example is preserved on that page.
+to sixteen quadrotors. Large matched landing close-ups retain a full-fleet
+overview below. The 3:10 video explains the same six terms: 工作记忆 (active task
+state in this engineering example), 会话状态 (session state), 团队记忆 (team memory),
+记忆片段 (memory fragments), 观测时效 (observation freshness), and 长期记忆 (long-term
+memory). Every term is pronounced in Mandarin and explained in English.
+
+This is a **teaching revision of existing CUDA flight recordings**, not new
+physics or a memory-product benchmark. The underlying 48 exploratory episodes
+remain separate from the gardening study. Both earlier drone movies are preserved.
 
 ## Earlier: Missing Receipts and Watering Progress
 
