@@ -86,6 +86,17 @@ depict aggregate outcomes as a single trajectory. The original silent reel's
 The earlier physical and task-level studies remain intact below; their sample
 counts are separate from this new suite.
 
+### Related: Four Flying Agents, Two Shared Landing Pads
+
+The [new narrated GPU fleet demonstration](https://github.com/rbajaj5/delay-aware-runtime-assurance-lab/tree/main/experiments/20261027_gpu_fleet_active_state)
+extends Ravi Bajaj's queue-aware research illustration from one physical robot
+to four quadrotors. It compares releasing a reservation on silence with retaining
+it until fresh completion evidence arrives. The 3:42 film shows measured CUDA
+rigid-body flight, synchronized task records, English narration and Mandarin
+terms. Its **48 exploratory episodes are separate** from the gardening study.
+With lost acceptance receipts, the tested timeout policy double-books pads;
+with lost telemetry, the queue-aware fleet instead leaves two tasks waiting.
+
 ## Earlier: Missing Receipts and Watering Progress
 
 **A mass-bearing humanoid waters three plants in GPU physics, while three task
