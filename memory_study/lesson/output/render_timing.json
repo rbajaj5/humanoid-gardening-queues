@@ -1,0 +1,29 @@
+{
+  "metric": "FFmpeg reported elapsed time for the main animation render and silent-video encoding",
+  "seconds": 284.57,
+  "measured_runs": 1,
+  "method": "Final completed frame/progress line from retained FFmpeg log",
+  "progress_line": "frame= 5599 fps= 20 q=-1.0 Lsize=    8201KiB time=00:03:43.88 bitrate= 300.1kbits/s speed=0.787x elapsed=0:04:44.57",
+  "render_log_sha256": "548ad6fdff34fc77ee2368bc349ae26fffe5d87d8c3d9bc1c6f814d666eec46f",
+  "public_log_sha256": "bb3d14d98476eb0075b245b190ab67681ee1a2c02ea953d1b685e6e97816771d",
+  "public_log_note": "Absolute output directory replaced by repository-relative path; line endings and trailing whitespace normalized. Progress numbers unchanged.",
+  "includes": [
+    "waiting for rendered OpenGL frames and Pillow composition",
+    "CPU libx264 video encoding",
+    "silent MP4 finalization"
+  ],
+  "excludes": [
+    "initial Python/model setup",
+    "audio assembly",
+    "GPU physics simulation",
+    "online speech synthesis",
+    "final audio/subtitle mux",
+    "validation",
+    "upload"
+  ],
+  "cpu": "Intel Core Ultra 9 275HX",
+  "installed_ram_gib": 32,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU; 12 GB VRAM",
+  "renderer": "Intel(R) Graphics",
+  "note": "The GPU physics was recorded previously. One observed render, not a benchmark average or GPU throughput claim."
+}

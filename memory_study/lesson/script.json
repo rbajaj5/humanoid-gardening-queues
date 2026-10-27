@@ -1,0 +1,97 @@
+{
+  "english_voice": "en-US-AndrewNeural",
+  "chinese_voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "-5%",
+  "source_date": "2026-10-27",
+  "chapters": [
+    {
+      "case": 0,
+      "term": "工作记忆",
+      "pinyin": "gōngzuò jìyì",
+      "english": "Working memory",
+      "definition": "Our engineering use: the active task state, including observations and pending actions.",
+      "source_label": "Related documentation: Tencent Agent Memory / short-term task context",
+      "source_url": "https://cloud.tencent.cn/document/product/1813/132100",
+      "cues": [
+        {"stage": "definition", "lang": "zh", "text": "工作记忆。", "caption": "工作记忆 · gōngzuò jìyì · Working memory"},
+        {"stage": "definition", "lang": "en", "text": "Working memory. Here, this means the robot's active task state, not human psychology. Tencent's engineering documentation describes short-term memory as managing the current task context."},
+        {"stage": "replay", "lang": "en", "text": "Both controllers water three plants normally. The target is sixty milliliters per pot. A language model's context window could carry task records, but this experiment tests execution rules, not context capacity."},
+        {"stage": "result", "lang": "en", "text": "Both finish at sixty per pot. The question is what those records authorize when something goes wrong."}
+      ]
+    },
+    {
+      "case": 1,
+      "term": "会话状态",
+      "pinyin": "huìhuà zhuàngtài",
+      "english": "Session state",
+      "definition": "Saved session context that can be restored when a task resumes.",
+      "source_label": "Alibaba AgentRun / session state; physical-action rule is our interpretation",
+      "source_url": "https://help.aliyun.com/zh/agentrun/memory-storage-overview",
+      "cues": [
+        {"stage": "definition", "lang": "zh", "text": "会话状态。", "caption": "会话状态 · huìhuà zhuàngtài · Session state"},
+        {"stage": "definition", "lang": "en", "text": "Session state. AgentRun describes saving and restoring session context. Restoring a plan, however, should not turn its original physical intention into a new action."},
+        {"stage": "replay", "lang": "en", "text": "At simulation time three seconds, the same plan is replayed. On the left, new request identities allow another pour. On the right, stable logical identities block the repeated commands."},
+        {"stage": "result", "lang": "en", "text": "Measured delivery is one hundred twenty per pot on the left, and sixty on the right. The executor stayed running; this is not crash recovery."}
+      ]
+    },
+    {
+      "case": 2,
+      "term": "团队记忆",
+      "pinyin": "tuánduì jìyì",
+      "english": "Team memory",
+      "definition": "Knowledge assets shared across users or agents; sharing is not an execution reservation.",
+      "source_label": "Tencent Agent Memory / team sharing; shared dose budget is our addition",
+      "source_url": "https://cloud.tencent.cn/document/product/1813/132100",
+      "cues": [
+        {"stage": "definition", "lang": "zh", "text": "团队记忆。", "caption": "团队记忆 · tuánduì jìyì · Team memory"},
+        {"stage": "definition", "lang": "en", "text": "Team memory. Tencent describes knowledge shared across users and agents. But shared knowledge that a plant needs water does not reserve the right to water it."},
+        {"stage": "replay", "lang": "en", "text": "Two software planners share one humanoid. Their commands have different identities. The left policy accepts both intentions. The right policy counts queued pours against one shared sixty-milliliter budget for each pot."},
+        {"stage": "result", "lang": "en", "text": "The left delivers one hundred twenty per pot; the right, sixty. Identity checks alone cannot detect distinct requests for the same effect."}
+      ]
+    },
+    {
+      "case": 3,
+      "term": "记忆片段",
+      "pinyin": "jìyì piànduàn",
+      "english": "Memory fragments",
+      "definition": "Extracted information recalled later; retrieval time is not observation time.",
+      "source_label": "Alibaba Bailian / memory fragments; stale physical snapshot is our analogy",
+      "source_url": "https://help.aliyun.com/zh/model-studio/long-term-memory",
+      "cues": [
+        {"stage": "definition", "lang": "zh", "text": "记忆片段。", "caption": "记忆片段 · jìyì piànduàn · Memory fragments"},
+        {"stage": "definition", "lang": "en", "text": "Memory fragments. Bailian describes extracted information recalled for later use. Our physical analogy is an old observation of a dry plant."},
+        {"stage": "replay", "lang": "en", "text": "At simulation time twenty seconds, that initial observation arrives again. The left policy treats the latest arrival as current evidence. The right policy checks the original timestamp and rejects the older snapshot."},
+        {"stage": "result", "lang": "en", "text": "Again, delivery is one hundred twenty versus sixty per pot. Remembering a true past fact does not make it true now."}
+      ]
+    },
+    {
+      "case": 4,
+      "term": "观测时效",
+      "pinyin": "guāncè shíxiào",
+      "english": "Observation freshness",
+      "definition": "Our monitoring label: whether an observation is recent enough to permit a new skill.",
+      "source_label": "Our experiment's engineering label, not a quoted vendor memory category",
+      "source_url": null,
+      "cues": [
+        {"stage": "definition", "lang": "zh", "text": "观测时效。", "caption": "观测时效 · guāncè shíxiào · Observation freshness"},
+        {"stage": "definition", "lang": "en", "text": "Observation freshness. This is our monitoring label, not a vendor memory category. The guard requires observations less than half a second old before starting another skill."},
+        {"stage": "replay", "lang": "en", "text": "Observations stop at simulation time one second. The guarded robot finishes its active pour, then waits. The unguarded robot continues, and in this stationary scene it completes all three doses."},
+        {"stage": "result", "lang": "en", "text": "The guard holds for thirty-four point two eight seconds and leaves two pots unwatered. That availability cost matters. More checking is not automatically more useful."}
+      ]
+    },
+    {
+      "case": 0,
+      "term": "长期记忆",
+      "pinyin": "chángqī jìyì",
+      "english": "Long-term memory",
+      "definition": "Persistent information across sessions, distinct from current task state and action authority.",
+      "source_label": "Alibaba AgentRun / long-term memory; not implemented or benchmarked here",
+      "source_url": "https://help.aliyun.com/zh/agentrun/memory-storage-overview",
+      "cues": [
+        {"stage": "summary", "lang": "zh", "text": "长期记忆。", "caption": "长期记忆 · chángqī jìyì · Long-term memory"},
+        {"stage": "summary", "lang": "en", "text": "Long-term memory preserves information across sessions. It is distinct from active task state and permission to act. These comparisons test our execution rules, not the memory products themselves."},
+        {"stage": "summary", "lang": "en", "text": "The study contains forty synthetic GPU-physics episodes across two seeds. This replay shows one seed. No language model, real robot, or soil biology is tested. The lesson is to separate remembered knowledge, pending commitments, and current evidence."}
+      ]
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # Engineering memory is not authority to act
 
+**[Narrated Chinese engineering lesson: video, glossary and sources](lesson/README.md)**
+explains the vocabulary with Mandarin pronunciations, English narration and
+captions. It uses the same recorded experiment, not new physics runs. The
+original silent compact replay remains available below.
+
 Evidence: [measured results](output/RESULTS.md), [per-episode summaries](output/summaries.json),
 [trace validation](output/validation.json). The `complete` field in validation
 must be true before treating these files as the completed 40-episode suite.

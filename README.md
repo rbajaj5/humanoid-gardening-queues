@@ -5,9 +5,33 @@ the same as having authority to execute it.**
 
 ## New: Engineering Memory and Physical Actions
 
-[![Watch the engineering-memory GPU comparison](memory_study/output/preview_2.jpg)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-gpu-2026-10-26/engineering_memory_gpu.mp4)
+[![Watch the narrated Chinese engineering lesson](memory_study/lesson/output/preview_2.jpg)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-narrated-2026-10-27/engineering_memory_narrated.mp4)
 
-**[Watch or download the new MP4 (60 seconds, 1080p, bilingual labels and English captions; silent)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-gpu-2026-10-26/engineering_memory_gpu.mp4)**
+**[Watch the narrated lesson (3:44, 1080p, English explanation, Mandarin pronunciations and captions)](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-narrated-2026-10-27/engineering_memory_narrated.mp4)**
+
+**Measured render + video encode: 4 min 44.57 s (284.57 s)** for 5,599 frames at
+1920x1080 / 25 fps. This is one observed run, from FFmpeg's final elapsed-time
+record. It excludes speech generation, initial model setup, audio assembly,
+final audio/subtitle muxing, validation and the earlier physics simulations.
+Laptop: Intel Core Ultra 9 275HX, 32 GB RAM, RTX 5070 Ti Laptop GPU with 12 GB VRAM.
+CPU libx264 handles encoding; this replay used Intel Graphics for OpenGL rendering.
+The original physics used NVIDIA CUDA. [Timing details](memory_study/lesson/output/render_timing.json).
+
+The revised video explains the Chinese engineering vocabulary instead of only
+displaying labels: working memory, session state, team memory, memory fragments,
+observation freshness, and long-term memory. Definitions pause on the initial
+state; then the measured robot replay runs; finally the narrator explains the
+outcome. Our interpretations are distinguished from the vendors' descriptions.
+The English and Mandarin voices are synthetic neural speech, not a human speaker.
+
+[Term-by-term glossary, sources and narration method](memory_study/lesson/README.md)
+| [Captions](memory_study/lesson/output/captions.srt)
+| [Exact narration script](memory_study/lesson/script.json)
+| [Render timing record](memory_study/lesson/output/render_timing.json)
+
+This is a teaching revision, **not a new batch of simulation results**. The
+[original 60-second silent comparison](https://github.com/rbajaj5/humanoid-gardening-queues/releases/download/engineering-memory-gpu-2026-10-26/engineering_memory_gpu.mp4)
+remains available, separately from the earlier narrated watering demo below.
 
 The same mass-bearing humanoid waters three plants while four execution policies
 handle plan replay, shared task state, stale observations, and an observation
@@ -45,11 +69,14 @@ not address that case.
 is not necessarily pot overflow or plant damage. Two seeds and deliberately
 constructed faults do not establish field reliability or general superiority.
 
-**Validation:** 27 tests passed; the independent trace audit covers all 40,000
-retained states. All 1,500 encoded video frames decode, with source-state links
-and sampled image comparisons checked. The video illustrates seed 45110 only:
-each shown episode samples 251 of its 1,000 states across its full 40 s duration.
-It does not depict aggregate outcomes as a single trajectory.
+**Evidence:** 27 tests passed; the independent trace audit covers all 40,000
+retained states. The narrated replay illustrates seed 45110 only, with paused
+definitions and accelerated traversal of each 40 s episode. Its
+[frame manifest](memory_study/lesson/output/movie_frames.json) reports exact
+unique-sample coverage, and its [media audit](memory_study/lesson/output/validation.json)
+checks decoded video, audible narration and source-state links. It does not
+depict aggregate outcomes as a single trajectory. The original silent reel's
+1,500-frame audit and 251/1,000-sample coverage remain separately recorded.
 
 - [Study, Chinese documentation and reproducible commands](memory_study/README.md)
 - [Full measured results](memory_study/output/RESULTS.md) and [episode summaries](memory_study/output/summaries.json)

@@ -4,6 +4,17 @@
 The root README and checkpoint now feature this study for public release.
 Earlier GPU garden, laundry, RAG, and registered assurance results are unchanged.
 
+## October 27 Narrated Revision
+
+`lesson/` adds a 223.96 s explanation of the same experiments, not new runs.
+It includes six Mandarin terms, English neural narration and synchronized
+captions over measured trajectories. All 5,599 frames decoded, 23 audible
+cues and per-frame state links passed verification, and all six chapters
+were visually inspected. The 27 tests and 40,000-state audit passed again.
+Render/encode timing (284.57 s, one measured run) is documented beside the
+video rather than inserted into it. See `lesson/CHECKPOINT.md` for details.
+All original silent-video and study records below remain intact.
+
 ## Purpose and current design
 
 Read Chinese engineering docs from Alibaba AgentRun/Bailian and Tencent Agent

@@ -1,0 +1,216 @@
+{
+  "complete": true,
+  "decoded_frames": 5599,
+  "frame_links_checked": 5599,
+  "narration_cues": 23,
+  "chinese_pronunciations": 6,
+  "audio_checks": [
+    {
+      "cue": 0,
+      "decoded_rms": 3023.060103090379
+    },
+    {
+      "cue": 1,
+      "decoded_rms": 3871.360642953369
+    },
+    {
+      "cue": 2,
+      "decoded_rms": 3722.0210503260546
+    },
+    {
+      "cue": 3,
+      "decoded_rms": 3529.115087529987
+    },
+    {
+      "cue": 4,
+      "decoded_rms": 3256.6417623780944
+    },
+    {
+      "cue": 5,
+      "decoded_rms": 3712.1979046701563
+    },
+    {
+      "cue": 6,
+      "decoded_rms": 3705.232478452246
+    },
+    {
+      "cue": 7,
+      "decoded_rms": 3707.0028480002093
+    },
+    {
+      "cue": 8,
+      "decoded_rms": 3513.125764302522
+    },
+    {
+      "cue": 9,
+      "decoded_rms": 3939.6297854360487
+    },
+    {
+      "cue": 10,
+      "decoded_rms": 3975.329768466265
+    },
+    {
+      "cue": 11,
+      "decoded_rms": 3536.802677241672
+    },
+    {
+      "cue": 12,
+      "decoded_rms": 3446.028783810519
+    },
+    {
+      "cue": 13,
+      "decoded_rms": 3972.87511620774
+    },
+    {
+      "cue": 14,
+      "decoded_rms": 3841.7234045622045
+    },
+    {
+      "cue": 15,
+      "decoded_rms": 3869.97716451054
+    },
+    {
+      "cue": 16,
+      "decoded_rms": 3182.8872279866973
+    },
+    {
+      "cue": 17,
+      "decoded_rms": 3855.876340025403
+    },
+    {
+      "cue": 18,
+      "decoded_rms": 3944.3156975810207
+    },
+    {
+      "cue": 19,
+      "decoded_rms": 3799.597016646006
+    },
+    {
+      "cue": 20,
+      "decoded_rms": 3097.0082110998405
+    },
+    {
+      "cue": 21,
+      "decoded_rms": 3787.3716055044065
+    },
+    {
+      "cue": 22,
+      "decoded_rms": 3767.8197989966156
+    }
+  ],
+  "encoded_frame_checks": [
+    {
+      "frame": 73,
+      "mean_absolute_pixel_error": 1.3160818544238684
+    },
+    {
+      "frame": 794,
+      "mean_absolute_pixel_error": 1.268092528292181
+    },
+    {
+      "frame": 1021,
+      "mean_absolute_pixel_error": 1.2293037872942387
+    },
+    {
+      "frame": 1678,
+      "mean_absolute_pixel_error": 1.2983977944958849
+    },
+    {
+      "frame": 1984,
+      "mean_absolute_pixel_error": 1.2931198559670782
+    },
+    {
+      "frame": 2608,
+      "mean_absolute_pixel_error": 1.3180531442901235
+    },
+    {
+      "frame": 2921,
+      "mean_absolute_pixel_error": 1.2779681069958848
+    },
+    {
+      "frame": 3554,
+      "mean_absolute_pixel_error": 1.2964679783950617
+    },
+    {
+      "frame": 3832,
+      "mean_absolute_pixel_error": 1.306005658436214
+    },
+    {
+      "frame": 4475,
+      "mean_absolute_pixel_error": 1.3119113297325102
+    },
+    {
+      "frame": 4809,
+      "mean_absolute_pixel_error": 1.306526813271605
+    },
+    {
+      "frame": 5145,
+      "mean_absolute_pixel_error": 1.328310345936214
+    }
+  ],
+  "coverage": {
+    "nominal_memory_only_45110": {
+      "shown": 382,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "nominal_queue_aware_45110": {
+      "shown": 382,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "checkpoint_replay_memory_only_45110": {
+      "shown": 342,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "checkpoint_replay_idempotent_45110": {
+      "shown": 342,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "shared_snapshot_identity_freshness_45110": {
+      "shown": 362,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "shared_snapshot_queue_aware_45110": {
+      "shown": 362,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "stale_recall_idempotent_45110": {
+      "shown": 371,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "stale_recall_identity_freshness_45110": {
+      "shown": 371,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "observation_outage_memory_only_45110": {
+      "shown": 355,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    },
+    "observation_outage_queue_aware_45110": {
+      "shown": 355,
+      "retained": 1000,
+      "first": 0,
+      "last": 999
+    }
+  },
+  "duration_s": 223.96,
+  "video_sha256": "83c8e757f17db4970ed64af3f360cb7e52d0b079b0674fdf9513026b25d6e2d4",
+  "note": "Waveform/timing and visual checks; not an ASR or pronunciation-accuracy benchmark"
+}

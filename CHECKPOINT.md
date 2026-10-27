@@ -1,7 +1,23 @@
 # Gardening GPU Checkpoint
 
-Updated 2026-10-26. Separate public repository:
+Updated 2026-10-27. Separate public repository:
 https://github.com/rbajaj5/humanoid-gardening-queues
+
+## Narrated Lesson Revision
+
+The front page now features the 223.96 s narrated revision in `memory_study/lesson/`.
+Six Chinese engineering terms have Mandarin pronunciations, pinyin, English
+definitions and neural narration over unchanged measured replays. Captions are
+burned in and separately available. All 5,599 frames decode; 23 audible cues,
+source-state links and 12 encoded image samples passed verification. All 27
+tests and the 40,000-state experiment audit passed again. No new physics runs.
+
+Per the user's latest request, measured rendering time is beside the video,
+not in its opening: 284.57 s for main render/encode from FFmpeg's retained log.
+Speech, setup, audio assembly, final mux, validation and prior physics are excluded.
+Intel OpenGL replay rendering and CPU libx264 encoding are distinguished from
+the original NVIDIA CUDA physics. See `memory_study/lesson/CHECKPOINT.md` for
+reproduction commands, validation and publication status.
 
 ## New Engineering-Memory Study
 
