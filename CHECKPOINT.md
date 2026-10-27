@@ -19,6 +19,10 @@ Intel OpenGL replay rendering and CPU libx264 encoding are distinguished from
 the original NVIDIA CUDA physics. See `memory_study/lesson/CHECKPOINT.md` for
 reproduction commands, validation and publication status.
 
+Published `engineering-memory-narrated-2026-10-27` from source commit
+`fa234d47a1051d45f29f9a3a1308457a6f418365`. GitHub's MP4 digest and byte size
+match the validated local file, and the front-page video/timing were read back.
+
 ## New Engineering-Memory Study
 
 The root README now features the separate `memory_study/` comparison, while all

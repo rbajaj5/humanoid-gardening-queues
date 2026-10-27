@@ -28,7 +28,11 @@ are excluded. Timing is placed beside the video, not in a video title card.
 
 Encoded-frame visual inspection covered all six chapters. All 27 tests and the
 40,000-state experiment audit passed again; original results are unchanged.
-Pending: publish this MP4 as a separate release, then check digest and remote page.
+Published release: `engineering-memory-narrated-2026-10-27`, targeting source
+commit `fa234d47a1051d45f29f9a3a1308457a6f418365`. The MP4 asset is 12,653,937
+bytes; GitHub's digest matches the SHA-256 above. Captions are a separate asset.
+The remote front page was read back with the new video, 284.57 s timing, hardware
+and explicit exclusions together. Publication is complete; no render job remains.
 
 Local speech environment: `../.venv-gardening-voice/Scripts/python.exe`.
 GPU/render environment remains `../.venv-laundry-gpu/Scripts/python.exe`.
@@ -46,6 +50,7 @@ are in `output/timeline.json`; online synthesis need not reproduce identical byt
 ../.venv-laundry-gpu/Scripts/python.exe -m unittest memory_study.test_protocol physical_garden.test_physics test_simulate -v
 ```
 
-Release target: `engineering-memory-narrated-2026-10-27`.
-Front-page links are prepared, but publishing is not complete until the release
-asset, digest and remote README have been checked. No other repository is changed.
+Release: https://github.com/rbajaj5/humanoid-gardening-queues/releases/tag/engineering-memory-narrated-2026-10-27
+Descriptive page: https://github.com/rbajaj5/humanoid-gardening-queues/tree/main/memory_study/lesson
+No other repository is changed. Remaining limits are scientific scope and
+external speech-service reproducibility, not unfinished publication work.
